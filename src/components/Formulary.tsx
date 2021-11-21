@@ -11,13 +11,19 @@ export default function Formulary() {
   price: 0,
   })
 
-  const { setProducts } = useContext(ProductsContext)
+  const { productList, setProducts } = useContext(ProductsContext)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
     setInput({
       ...input,
       [e.target.name]: e.target.value
     })
+  }
+
+  const setLocalStorage = () => {
+    if (!localStorage.productList) {
+      localStorage.setItem('productList', JSON.stringify(productList))
+    }
   }
 
   const handleClick = (): void => {
@@ -30,7 +36,9 @@ export default function Formulary() {
         price: input.price
       }
     )
+    setLocalStorage()
   }
+
   
   return (
     <div>
