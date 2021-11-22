@@ -3,17 +3,9 @@ import {Products} from '../interfaces/ProductInterface';
 
 export const DEFAULT_VALUE: Products = {
   productList: [],
-  setProducts: () => {}
+  setProducts: () => {},
+  editProducts: () => {},
 }
-
-// const contextDefaultValues: TodosContextState = {
-//   todos: [],
-//   addTodo: () => {}
-// };
-
-// export const TodosContext = createContext<TodosContextState>(
-//   contextDefaultValues
-// );
 
 const ProductsContext = createContext<Products>(DEFAULT_VALUE)
 
