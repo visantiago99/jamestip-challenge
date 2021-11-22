@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import ProductsContext from '../context/ProductsContext';
 import { productsItf } from '../interfaces/ProductInterface';
+import { Link } from 'react-router-dom';
 
 interface propsChildren extends productsItf {
   index: number;
@@ -41,6 +42,7 @@ const ProductCard: React.FC <propsChildren> = ( {index, ...product} ) => {
         price: inputEdit.price
       }
     )
+    buttonHandler()
   }
 
   const renderForm = () => {
@@ -50,7 +52,7 @@ const ProductCard: React.FC <propsChildren> = ( {index, ...product} ) => {
       <input type="text" placeholder="Nome do Produto" name="name"  onChange={handleChange} />
       <input type="text" placeholder="Nome do Fornecedor" name="suplierName" onChange={handleChange}  />
       <input type="number" placeholder="Valor do Produto" name="price" onChange={handleChange}  />
-      <button type="button" onClick={applyChange}>apply</button>
+      <Link to="/ProductList"><button type="button" onClick={applyChange}>apply</button></Link>
     </div>
   }
 
