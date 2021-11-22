@@ -6,31 +6,26 @@ export const Container = styled.div`
   color: #FFF;
   display: flex;
   align-items: center;
-  padding: 0 5px;
+  padding: 0 15px;
   justify-content: space-between;
   bottom: 0;
   position: fixed;
   min-width: 100%;
+  min-height: 220px;
 
-  .social-links {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px
+  .logo-hero h2 {
+    color: #00D0B3;
   }
 
-  button {
-    background-color: #000000;
-    border-style: solid;
-    border-width: 1px 1px 1px 1px;
-    border-color: #FFFFFF;
-    border-radius: 20px 20px 20px 20px;
-    color: #ffffff;
-    padding: 12px 24px;
-    font: 15px Robot, sans-serif;
+  .about h2 {
+    color: #00D0B3;
   }
 
-  .quero-faturar{
-    background-color: #00D0B3;
-    color: #000000;
+  .contact {
+    margin-right: 30px;
+  }
+
+  .contact h2 {
+    color: #00D0B3;
   }
 `;
