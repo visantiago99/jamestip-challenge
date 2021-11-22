@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import ProductsContext from '../context/ProductsContext';
 import { productsItf } from '../interfaces/ProductInterface';
+import GlobalStyle from '../styles/global';
 
 export default function Formulary() {
   const [input, setInput] = useState<productsItf>({
@@ -45,7 +46,8 @@ export default function Formulary() {
   }
 
   return (
-    <div>
+    <div className="formulary">
+      <GlobalStyle />
       <input type="text" placeholder="Código do Produto" name="productId" onChange={handleChange} value={input.productId} />
       <input type="text" placeholder="Categoria do Produto" name="category" onChange={handleChange} value={input.category} />
       <input type="text" placeholder="Nome do Produto" name="name" onChange={handleChange} value={input.name} />

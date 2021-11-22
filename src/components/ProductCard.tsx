@@ -9,7 +9,7 @@ interface propsChildren extends productsItf {
 
 
 const ProductCard: React.FC <propsChildren> = ( {index, ...product} ) => {
-  const { productList, editProducts, deleteProducts } = useContext(ProductsContext)
+  const { editProducts, deleteProducts } = useContext(ProductsContext)
   const [showEdit, setShowEdit] = useState(false)
   const [inputEdit, setInputEdit] = useState<productsItf>({
       productId: "",
