@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
 import Header from '../components/Header';
 import GlobalStyle from '../styles/global';
+import Footer from '../components/Footer';
 
 export default function ProductsList() {
   const { productList } = useContext(ProductsContext)
@@ -25,6 +26,7 @@ export default function ProductsList() {
       <Link to="/">
         <button type="button">Voltar</button>
       </Link>
+      <Footer />
     </div>
   )
 }
