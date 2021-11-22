@@ -12,7 +12,7 @@ export const Container = styled.div`
   margin-top: 15rem;
   position: relative;
   min-width: 100%;
-  min-height: 220px;
+  height: 100%;
   
   .logo-hero h2 {
     color: #00D0B3;
@@ -33,4 +33,10 @@ export const Container = styled.div`
   .links {
     font-size: 27px;
   } 
+
+  @media (min-width: 860px) {
+    .about {
+      margin-right: 10rem;
+    }
+  }
 `;

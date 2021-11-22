@@ -52,7 +52,7 @@ export default createGlobalStyle`
   .card-style {
     max-width: 18rem;
     margin-top: 3rem;
-    margin-bottom: 15rem;
+    margin-bottom: 2rem;
   }
 
   .card-container {

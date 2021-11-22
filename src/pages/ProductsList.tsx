@@ -24,7 +24,7 @@ export default function ProductsList() {
       <br />
       <br />
       <Link to="/">
-        <button type="button">Voltar</button>
+        <button className="btn-info" type="button">Voltar</button>
       </Link>
       <Footer />
     </div>
