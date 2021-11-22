@@ -18,9 +18,9 @@ export default function ProductsList() {
     <div>
       <GlobalStyle />
       <Header />
-      <ul>
+      <div className="card-container">
         {productList.length > 0 ? productList.map((pdt, i) =><ProductCard {...pdt} index={i} />) : localObj.map((pdt: any, i: any) =><ProductCard {...pdt} index={i} />)}
-      </ul>
+      </div>
       <br />
       <br />
       <Link to="/">

@@ -9,6 +9,7 @@ export default createGlobalStyle`
 
   body {
     background: #fafafa;
+    width: 100%;
   }
 
   .formulary {
@@ -48,4 +49,15 @@ export default createGlobalStyle`
     font: 15px Robot, sans-serif;
   }
 
+  .card-style {
+    max-width: 18rem;
+    margin-top: 3rem;
+    margin-bottom: 15rem;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;

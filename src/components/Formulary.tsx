@@ -46,14 +46,14 @@ export default function Formulary() {
   }
 
   return (
-    <div className="formulary">
+    <div className="formulary mb-3">
       <GlobalStyle />
-      <input type="text" placeholder="Código do Produto" name="productId" onChange={handleChange} value={input.productId} />
-      <input type="text" placeholder="Categoria do Produto" name="category" onChange={handleChange} value={input.category} />
-      <input type="text" placeholder="Nome do Produto" name="name" onChange={handleChange} value={input.name} />
-      <input type="text" placeholder="Nome do Fornecedor" name="suplierName" onChange={handleChange} value={input.suplierName} />
-      <input type="number" placeholder="Valor do Produto" name="price" onChange={handleChange}  />
-      <button type="button" onClick={handleClick}>Adicionar produto</button>
+      <input className="form-control" type="text" placeholder="Código do Produto" name="productId" onChange={handleChange} value={input.productId} />
+      <input className="form-control" type="text" placeholder="Categoria do Produto" name="category" onChange={handleChange} value={input.category} />
+      <input className="form-control" type="text" placeholder="Nome do Produto" name="name" onChange={handleChange} value={input.name} />
+      <input className="form-control" type="text" placeholder="Nome do Fornecedor" name="suplierName" onChange={handleChange} value={input.suplierName} />
+      <input className="form-control"type="number" placeholder="Valor do Produto" name="price" onChange={handleChange}  />
+      <button type="button" className="btn-info" onClick={handleClick}>Adicionar produto</button>
     </div>
   )
 }

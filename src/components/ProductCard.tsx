@@ -50,12 +50,12 @@ const ProductCard: React.FC <propsChildren> = ( {index, ...product} ) => {
   }
 
   const renderForm = () => {
-    return <div>
-      <input type="text" placeholder="Código do Produto" name="productId" onChange={handleChange}  />
-      <input type="text" placeholder="Categoria do Produto" name="category"  onChange={handleChange} />
-      <input type="text" placeholder="Nome do Produto" name="name"  onChange={handleChange} />
-      <input type="text" placeholder="Nome do Fornecedor" name="suplierName" onChange={handleChange}  />
-      <input type="number" placeholder="Valor do Produto" name="price" onChange={handleChange}  />
+    return <div className="formulary mb-3">
+      <input className="form-control" type="text" placeholder="Código do Produto" name="productId" onChange={handleChange}  />
+      <input className="form-control" type="text" placeholder="Categoria do Produto" name="category"  onChange={handleChange} />
+      <input className="form-control" type="text" placeholder="Nome do Produto" name="name"  onChange={handleChange} />
+      <input className="form-control" type="text" placeholder="Nome do Fornecedor" name="suplierName" onChange={handleChange}  />
+      <input className="form-control" type="number" placeholder="Valor do Produto" name="price" onChange={handleChange}  />
       <Link to="/ProductList"><button type="button" onClick={applyChange}>apply</button></Link>
     </div>
   }
@@ -63,14 +63,15 @@ const ProductCard: React.FC <propsChildren> = ( {index, ...product} ) => {
   if (showEdit) return renderForm()
 
   return (
-    <div>
-          <p>{product.productId}</p>
-          <p>{product.category}</p>
-          <p>{product.name}</p>
-          <p>{product.suplierName}</p>
-          <p>{product.price}</p>
-          <button type="button" onClick={buttonHandler}>editar</button>
-          <button type="button" onClick={deleteButton}>delete</button>
+    <div className="card card-style">
+      <div className="card-body">
+          <h5 className="card-title">{product.name}</h5>
+          <h6 className="card-subtitle mb-2 text-muted">ID do produto: {product.productId} | Categoria: {product.category}</h6>
+          <h6>{product.suplierName}</h6>
+          <h6>{product.price}</h6>
+          <button className="btn-warning" type="button" onClick={buttonHandler}>editar</button>
+          <button className="btn-danger" type="button" onClick={deleteButton}>deletar</button>
+      </div>
     </div>
   )
 }

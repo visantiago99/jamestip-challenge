@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container } from './styles';
-import JamesTipLogo from '../../images/JamesTipLogo.png'
+import JamesTipLogo from '../../images/JamesTipLogo.png';
+import { AiOutlineMail, AiOutlinePhone, AiOutlineFacebook, AiOutlineInstagram, AiOutlineWhatsApp } from "react-icons/ai";
 
 const Footer: React.FC = () => {
   return (
@@ -8,8 +9,8 @@ const Footer: React.FC = () => {
       <div className="logo-hero">
         <img src={JamesTipLogo} alt="logo"/>
         <h2>Pronto para faturar mais?</h2>
-        <h3>comercial@jamestip.com</h3>
-        <h3>+55 51 99102 9289</h3>
+        <h3><AiOutlineMail /> comercial@jamestip.com</h3>
+        <h3><AiOutlinePhone /> +55 51 99102 9289</h3>
       </div>
       <div className="about">
         <h2>Sobre nós</h2>
@@ -20,6 +21,9 @@ const Footer: React.FC = () => {
       <div className="contact">
         <h2>Fale conosco</h2>
         <h3>Contato</h3>
+        <AiOutlineFacebook className="links" />
+        <AiOutlineInstagram className="links" />
+        <AiOutlineWhatsApp className="links" />
       </div>
     </Container>
   );

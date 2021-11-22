@@ -9,10 +9,11 @@ export const Container = styled.div`
   padding: 0 15px;
   justify-content: space-between;
   bottom: 0;
-  position: fixed;
+  margin-top: 15rem;
+  position: relative;
   min-width: 100%;
   min-height: 220px;
-
+  
   .logo-hero h2 {
     color: #00D0B3;
   }
@@ -28,4 +29,8 @@ export const Container = styled.div`
   .contact h2 {
     color: #00D0B3;
   }
+
+  .links {
+    font-size: 27px;
+  } 
 `;

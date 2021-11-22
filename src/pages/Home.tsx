@@ -17,7 +17,7 @@ const Home = () => {
       <Formulary />
       <br />
       <Link to="/ProductList">
-        <button type="button" className="plist-link">Lista de produtos</button>
+        <button type="button" className="plist-link btn-info">Lista de produtos</button>
       </Link>
       <Footer />
     </div>
