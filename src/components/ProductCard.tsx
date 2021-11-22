@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { MouseEventHandler, useContext, useState } from 'react';
 import ProductsContext from '../context/ProductsContext';
 import { productsItf } from '../interfaces/ProductInterface';
 import { Link } from 'react-router-dom';
@@ -9,7 +9,7 @@ interface propsChildren extends productsItf {
 
 
 const ProductCard: React.FC <propsChildren> = ( {index, ...product} ) => {
-  const { editProducts } = useContext(ProductsContext)
+  const { productList, editProducts, deleteProducts } = useContext(ProductsContext)
   const [showEdit, setShowEdit] = useState(false)
   const [inputEdit, setInputEdit] = useState<productsItf>({
       productId: "",
@@ -30,11 +30,10 @@ const ProductCard: React.FC <propsChildren> = ( {index, ...product} ) => {
     })
   }
 
+
   const applyChange = () => {
-    console.log(product);
     editProducts(index, 
       {
-        ...product, 
         productId: inputEdit.productId,
         category: inputEdit.category,
         name: inputEdit.name,
@@ -43,6 +42,11 @@ const ProductCard: React.FC <propsChildren> = ( {index, ...product} ) => {
       }
     )
     buttonHandler()
+  }
+
+  const deleteButton = (): MouseEventHandler<HTMLButtonElement> | undefined => {
+    deleteProducts(index)
+    return 
   }
 
   const renderForm = () => {
@@ -66,6 +70,7 @@ const ProductCard: React.FC <propsChildren> = ( {index, ...product} ) => {
           <p>{product.suplierName}</p>
           <p>{product.price}</p>
           <button type="button" onClick={buttonHandler}>editar</button>
+          <button type="button" onClick={deleteButton}>delete</button>
     </div>
   )
 }

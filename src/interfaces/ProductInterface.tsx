@@ -10,5 +10,6 @@ export interface Products {
   productList: productsItf[]
   setProducts: (product: productsItf) => void
   editProducts: (PdtId: number, pdt: productsItf) => void
+  deleteProducts: (PdtId: number) => void
 }
 

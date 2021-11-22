@@ -18,10 +18,16 @@ export const  ProductsProvider: React.FC  = ({ children }) => {
       return p
     })
     setProductList([...pdtFilter])
+    localStorage.setItem('productList', JSON.stringify([...pdtFilter]))
+  }
+
+  const deleteProducts = (PdtId: number) => {
+    const remove = productList.filter((p, i) => i !== PdtId)
+    setProductList([...remove])
   }
 
   return (
-    <ProductsContext.Provider value={{productList, setProducts, editProducts}}  >
+    <ProductsContext.Provider value={{productList, setProducts, editProducts, deleteProducts}}  >
       {children}
     </ProductsContext.Provider>
   );
